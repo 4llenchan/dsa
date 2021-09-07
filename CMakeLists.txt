@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(dsa
         main.cpp
+        lc/LC10.cpp
         of/OF5.cpp
         of/OF6.cpp)
 
