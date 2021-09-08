@@ -7,7 +7,9 @@ add_executable(dsa
         main.cpp
         lc/LC10.cpp
         of/OF5.cpp
-        of/OF6.cpp)
+        of/OF6.cpp
+        of/OF10_I.cpp
+        of/OF42.cpp)
 
 target_include_directories(dsa PRIVATE common)
 
