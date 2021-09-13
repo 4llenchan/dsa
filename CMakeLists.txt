@@ -13,6 +13,7 @@ add_executable(dsa
         of/OF42.cpp
         of/OF46.cpp
         of/OF47.cpp
+        of/OF48.cpp
         )
 
 target_include_directories(dsa PRIVATE common)
