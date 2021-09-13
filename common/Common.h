@@ -8,14 +8,11 @@ struct ListNode {
     explicit ListNode(int x) : val(x), next(nullptr) {}
 };
 
-void deleteList(ListNode *&head) {
-    if (head) {
-        if (head->next) {
-            deleteList(head->next);
-        }
-        delete head;
-        head = nullptr;
-    }
-}
+/**
+ * Delete a list with head node recursively.
+ *
+ * @param head head node to delete
+ */
+extern void deleteList(ListNode *&head);
 
-#endif //DSA_COMMON_H
+#endif // DSA_COMMON_H
