@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(dsa
         main.cpp
+        common/Algorithm.cpp
         common/Common.cpp
         lc/LC10.cpp
         of/OF5.cpp
@@ -15,7 +16,7 @@ add_executable(dsa
         of/OF47.cpp
         of/OF48.cpp
         of/OF60.cpp
-        )
+        test/AlgorithmTests.cpp)
 
 target_include_directories(dsa PRIVATE common)
 
