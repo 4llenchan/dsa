@@ -11,12 +11,11 @@ public:
             nums.insert(nums.begin(), num % 10);
             num /= 10;
         }
-        int n = nums.size();
+        int n = (int)nums.size();
         int a = 1;
         int b = 1;
-        int tmp;
         for (int i = 1; i < n; ++i) {
-            tmp = nums[i - 1] * 10 + nums[i];
+            int tmp = nums[i - 1] * 10 + nums[i];
             int c;
             if (tmp <= 25 && tmp >= 10) {
                 c = a + b;

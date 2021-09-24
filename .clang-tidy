@@ -1,0 +1,2 @@
+Checks: '-cert-err58-cpp,-readability-convert-member-functions-to-static'
+InheritParentConfig: true
