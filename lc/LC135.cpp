@@ -24,13 +24,18 @@ public:
                 candies[i] = candies[i - 1] + 1;
             }
         }
-        for (int i = size - 1; i > 0; --i) {
-            if (ratings[i - 1] > ratings[i]) {
+        int right = candies[size - 1];
+        int count = right;
+        for (int i = size - 2; i >= 0; --i) {
+            if (ratings[i] > ratings[i + 1]) {
                 /* 因为有前面一次的遍历，这里需要取max，才能保证前一轮遍历的结果仍然正确 */
-                candies[i - 1] = max(candies[i - 1], candies[i] + 1);
+                right = max(candies[i], right + 1);
+            } else {
+                right = candies[i];
             }
+            count += right;
         }
-        return accumulate(candies.begin(), candies.end(), 0);
+        return count;
     }
 };
 
