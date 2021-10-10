@@ -37,5 +37,5 @@ TEST_F(OF6Tests, normal) {
     auto result = solution.reversePrint(head);
     vector<int> expect = {2, 3, 1};
     EXPECT_EQ(result, expect);
-    deleteList(head);
+    ListNode::deleteList(head);
 }
