@@ -7,6 +7,7 @@ add_executable(dsa
         main.cpp
         common/Algorithm.cpp
         common/Common.cpp
+        lc/LC6.cpp
         lc/LC10.cpp
         lc/LC135.cpp
         lc/LC435.cpp
