@@ -26,7 +26,9 @@ public:
         while (l <= r) {
             int mid = l + (r - l) / 2;
             sqrt = (long long)mid * mid;
-            if (sqrt <= x) {
+            if (sqrt == x) {
+                return mid;
+            } else if (sqrt < x) {
                 result = mid;
                 l = mid + 1;
             } else {
