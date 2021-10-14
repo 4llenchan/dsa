@@ -44,3 +44,15 @@ void ListNode::deleteCycleList(ListNode *&head) {
     }
     head = nullptr;
 }
+
+bool Utils::isOrderly(std::vector<int> &nums, bool ascending) {
+    for (int i = 1; i < nums.size(); ++i) {
+        if (ascending && nums[i] < nums[i - 1]) {
+            return false;
+        }
+        if (!ascending && nums[i] > nums[i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}

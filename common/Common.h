@@ -35,4 +35,16 @@ struct ListNode {
     static void deleteCycleList(ListNode *&head);
 };
 
+class Utils {
+public:
+    /**
+     * Check an array whether is in ascending or descending order.
+     *
+     * @param nums array to check
+     * @param ascending whether to check in ascending order
+     * @return whether the array is in the right order
+     */
+    static bool isOrderly(std::vector<int> &nums, bool ascending);
+};
+
 #endif // DSA_COMMON_H
