@@ -5,24 +5,21 @@ void quickSortInternal(std::vector<int> &elements, int start, int end) {
         return;
     }
     int pivot = elements[start];
-    int left = start + 1;
+    int left = start;
     int right = end;
     while (left < right) {
         while (elements[right] > pivot && left < right) {
             right--;
         }
+        elements[left] = elements[right];
         while (elements[left] <= pivot && left < right) {
             left++;
         }
-        std::swap(elements[left], elements[right]);
+        elements[right] = elements[left];
     }
-    if (elements[right] < pivot) {
-        std::swap(elements[start], elements[right]);
-    } else {
-        right--;
-    }
+    elements[left] = pivot;
     quickSortInternal(elements, start, left - 1);
-    quickSortInternal(elements, right + 1, end);
+    quickSortInternal(elements, left + 1, end);
 }
 
 void Algorithm::quickSort(std::vector<int> &elements) {
