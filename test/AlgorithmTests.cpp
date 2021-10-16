@@ -39,6 +39,12 @@ TEST_P(AlgorithmTests, selectSort) {
     EXPECT_TRUE(Utils::isOrderly(nums, true));
 }
 
+TEST_P(AlgorithmTests, heapSort) {
+    vector<int> nums = GetParam();
+    Algorithm::heapSort(nums);
+    EXPECT_TRUE(Utils::isOrderly(nums, true));
+}
+
 INSTANTIATE_TEST_SUITE_P(sort, AlgorithmTests,
                          ::testing::Values(
                                  vector<int>{6, 1, 2, 7, 9, 11, 5, 4, 3, 10, 8},

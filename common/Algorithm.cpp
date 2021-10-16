@@ -99,3 +99,44 @@ void Algorithm::selectSort(std::vector<int> &nums) {
         std::swap(nums[k], nums[i]);
     }
 }
+
+/**
+ * 递归调整一个节点为子树为大顶堆
+ *
+ * @param nums 待调整的数组
+ * @param length 数组长度
+ * @param index 需要调整的节点下标
+ */
+void adjustHeap(std::vector<int> &nums, int length, int index) {
+    int left = 2 * index + 1;
+    int right = 2 * index + 2;
+
+    int maxIndex = index;
+    if (left < length && nums[left] > nums[maxIndex]) {
+        maxIndex = left;
+    }
+    if (right < length && nums[right] > nums[maxIndex]) {
+        maxIndex = right;
+    }
+
+    if (maxIndex != index) {
+        std::swap(nums[index], nums[maxIndex]);
+        /* 由于maxIndex位置的值被替换，可能为导致以maxIndex节点的子树破坏了大顶堆的规则，需要重新调整 */
+        adjustHeap(nums, length, maxIndex);
+    }
+}
+
+void Algorithm::heapSort(std::vector<int> &nums) {
+    int n = (int)nums.size();
+    /* 从最后一个非叶子节点开始往前遍历，调整整课树为大顶堆 */
+    for (int i = (n / 2 - 1); i >= 0; --i) {
+        adjustHeap(nums, n, i);
+    }
+
+    for (int i = n - 1; i > 0; --i) {
+        /* 将大顶堆的第一个节点，也就是当前最大值替换到末尾 */
+        std::swap(nums[0], nums[i]);
+        /* 由于大顶堆的第一个节点，即index为0的节点进行了调整，可能会破坏大顶堆，重新调整 */
+        adjustHeap(nums, i, 0);
+    }
+}

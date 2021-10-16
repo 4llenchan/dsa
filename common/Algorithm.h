@@ -14,6 +14,8 @@ public:
     static void bubbleSort(std::vector<int> &nums);
 
     static void selectSort(std::vector<int> &nums);
+
+    static void heapSort(std::vector<int> &nums);
 };
 
 #endif // DSA_ALGORITHM_H
