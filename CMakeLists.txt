@@ -12,6 +12,7 @@ add_executable(dsa
         lc/LC33.cpp
         lc/LC34.cpp
         lc/LC46.cpp
+        lc/LC64.cpp
         lc/LC69.cpp
         lc/LC76.cpp
         lc/LC77.cpp
