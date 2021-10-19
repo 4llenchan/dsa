@@ -7,6 +7,10 @@
 
 using namespace std;
 
+/**
+ * https://leetcode-cn.com/problems/assign-cookies/
+ * 贪心算法
+ */
 class Solution {
 public:
     int findContentChildren(vector<int>& g, vector<int>& s) {

@@ -10,6 +10,7 @@ using namespace std;
 
 /*
  * https://leetcode-cn.com/problems/candy/
+ * 两次遍历的贪心算法
  */
 class Solution {
 public:
