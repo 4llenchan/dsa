@@ -23,6 +23,7 @@ add_executable(dsa
         lc/LC167.cpp
         lc/LC215.cpp
         lc/LC221.cpp
+        lc/LC225.cpp
         lc/LC300.cpp
         lc/LC347.cpp
         lc/LC413.cpp
@@ -42,7 +43,8 @@ add_executable(dsa
         of/OF47.cpp
         of/OF48.cpp
         of/OF60.cpp
-        test/AlgorithmTests.cpp)
+        test/AlgorithmTests.cpp
+        test/CommonTests.cpp)
 
 target_include_directories(dsa PRIVATE common)
 
