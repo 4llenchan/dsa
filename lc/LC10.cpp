@@ -3,6 +3,10 @@
 
 using namespace std;
 
+/**
+ * https://leetcode-cn.com/problems/regular-expression-matching/
+ * 动态规划正则表达式匹配
+ */
 class Solution {
 public:
     bool isMatch(string s, string p) {
