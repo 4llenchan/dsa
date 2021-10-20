@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+
 #include <vector>
 
 using namespace std;
@@ -29,7 +30,7 @@ public:
             for (int j = 1; j <= m; ++j) {
                 if (p[j - 1] == '*') {
                     f[i][j] |= f[i][j - 2];
-                    if (matches(i, j-1)) {
+                    if (matches(i, j - 1)) {
                         f[i][j] |= f[i - 1][j];
                     }
                 } else {

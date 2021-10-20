@@ -1,5 +1,6 @@
-#include "Common.h"
 #include <gtest/gtest.h>
+
+#include "Common.h"
 
 using namespace std;
 

@@ -1,7 +1,8 @@
 #include <gtest/gtest.h>
+
 #include <algorithm>
-#include <vector>
 #include <unordered_map>
+#include <vector>
 
 #include "Common.h"
 
@@ -17,12 +18,12 @@ public:
         /* 题目要求是可见字符范畴，即ASCII128，用128长度数组表示字符出现在s中的位置 */
         /* 初始化为-1，表示尚未出现过 */
         vector<int> occurence(128, -1);
-        int n = (int) s.size();
+        int n = (int)s.size();
         int dp = 0;
         int start = 0;
         int result = 0;
         for (int i = 0; i < n; ++i) {
-            int tmp = occurence[(int) s[i]];
+            int tmp = occurence[(int)s[i]];
             /*
              * 1. tmp为-1，即字符未出现过，长度+1
              * 2. tmp < start，表示字符在前面出现的位置已经超出了以s[i - 1]结尾的
@@ -41,7 +42,7 @@ public:
             /* 过程中记录最大值 */
             result = max(result, dp);
             /* 更新字符出现位置 */
-            occurence[(int) s[i]] = i;
+            occurence[(int)s[i]] = i;
         }
         return result;
     }

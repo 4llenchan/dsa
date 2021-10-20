@@ -1,8 +1,9 @@
 #include <gtest/gtest.h>
+
 #include <algorithm>
-#include <vector>
-#include <unordered_map>
 #include <numeric>
+#include <unordered_map>
+#include <vector>
 
 #include "Common.h"
 
@@ -43,9 +44,9 @@ protected:
 
 TEST_F(LC452Tests, case1) {
     vector<vector<int>> points{{10, 16},
-                               {2,  8},
-                               {1,  6},
-                               {7,  12}};
+                               {2, 8},
+                               {1, 6},
+                               {7, 12}};
     EXPECT_EQ(solution.findMinArrowShots(points), 2);
 }
 

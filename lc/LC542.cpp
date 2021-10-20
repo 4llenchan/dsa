@@ -1,9 +1,10 @@
-#include <algorithm>
 #include <gtest/gtest.h>
+
+#include <algorithm>
+#include <climits>
 #include <numeric>
 #include <unordered_map>
 #include <vector>
-#include <climits>
 
 #include "Common.h"
 
@@ -61,8 +62,8 @@ protected:
 };
 
 TEST_F(LC542Tests, case1) {
-    vector<vector<int>> mat{{0,0,0},{0,1,0},{0,0,0}};
-    vector<vector<int>> expect{{0,0,0},{0,1,0},{0,0,0}};
+    vector<vector<int>> mat{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
+    vector<vector<int>> expect{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
     auto result = solution1.updateMatrix(mat);
     EXPECT_EQ(expect, result);
 }

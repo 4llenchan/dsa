@@ -1,12 +1,13 @@
 #include <gtest/gtest.h>
+
 #include <vector>
+
 #include "Algorithm.h"
 #include "Common.h"
 
 using namespace std;
 
 class AlgorithmTests : public ::testing::TestWithParam<vector<int>> {
-
 };
 
 TEST_P(AlgorithmTests, quickSort) {
@@ -50,5 +51,4 @@ INSTANTIATE_TEST_SUITE_P(sort, AlgorithmTests,
                                  vector<int>{6, 1, 2, 7, 9, 11, 5, 4, 3, 10, 8},
                                  vector<int>{6, 7, 8, 9, 10},
                                  vector<int>{5, 4, 3, 2, 1},
-                                 vector<int>{3, 1}
-                         ));
+                                 vector<int>{3, 1}));

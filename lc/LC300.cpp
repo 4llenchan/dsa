@@ -1,6 +1,7 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <deque>
-#include <gtest/gtest.h>
 #include <numeric>
 #include <queue>
 #include <stack>
@@ -29,17 +30,17 @@ public:
             if (dp.back() < nums[i]) {
                 dp.push_back(nums[i]);
             } else {
-//                int l = 0;
-//                int r = (int)dp.size() - 1;
-//                while (l <= r) {
-//                    int mid = (l + r) / 2;
-//                    if (dp[mid] < nums[i]) {
-//                        l = mid + 1;
-//                    } else {
-//                        r = mid - 1;
-//                    }
-//                }
-//                dp[l] = nums[i];
+                /*int l = 0;
+                int r = (int)dp.size() - 1;
+                while (l <= r) {
+                    int mid = (l + r) / 2;
+                    if (dp[mid] < nums[i]) {
+                        l = mid + 1;
+                    } else {
+                        r = mid - 1;
+                    }
+                }
+                dp[l] = nums[i];*/
                 /* 找到第一个比nums[i]大的元素，内部使用二分查找 */
                 auto itr = lower_bound(dp.begin(), dp.end(), nums[i]);
                 *itr = nums[i];

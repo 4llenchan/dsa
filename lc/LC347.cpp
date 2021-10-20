@@ -1,6 +1,7 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <deque>
-#include <gtest/gtest.h>
 #include <numeric>
 #include <queue>
 #include <set>

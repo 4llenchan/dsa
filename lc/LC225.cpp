@@ -1,7 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <climits>
 #include <deque>
-#include <gtest/gtest.h>
 #include <numeric>
 #include <queue>
 #include <stack>

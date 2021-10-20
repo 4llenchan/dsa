@@ -8,7 +8,8 @@ struct ListNode {
     int val;
     ListNode *next;
 
-    explicit ListNode(int x) : val(x), next(nullptr) {}
+    explicit ListNode(int x) : val(x),
+                               next(nullptr) {}
 
     /**
      * Delete a list with head node recursively.

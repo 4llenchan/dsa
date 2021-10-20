@@ -1,8 +1,9 @@
 #include <gtest/gtest.h>
+
 #include <algorithm>
-#include <vector>
-#include <unordered_map>
 #include <numeric>
+#include <unordered_map>
+#include <vector>
 
 #include "Common.h"
 
@@ -26,7 +27,7 @@ public:
 
     int lowerBound(vector<int> &nums, int target) {
         int left = 0;
-        int right = (int) nums.size() - 1;
+        int right = (int)nums.size() - 1;
         int result = -1;
         while (left <= right) {
             int mid = (left + right) / 2;
@@ -44,7 +45,7 @@ public:
 
     int upperBound(vector<int> &nums, int target) {
         int left = 0;
-        int right = (int) nums.size() - 1;
+        int right = (int)nums.size() - 1;
         int result = -1;
         while (left <= right) {
             int mid = (left + right) / 2;

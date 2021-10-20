@@ -1,8 +1,9 @@
 #include <gtest/gtest.h>
+
 #include <algorithm>
-#include <vector>
-#include <unordered_map>
 #include <numeric>
+#include <unordered_map>
+#include <vector>
 
 #include "Common.h"
 
@@ -16,7 +17,7 @@ class Solution1 {
 public:
     string findLongestWord(string s, vector<string> &dictionary) {
         string result;
-        for (auto &str: dictionary) {
+        for (auto &str : dictionary) {
             int i = 0;
             int j = 0;
             while (i < str.size() && j < s.size()) {
@@ -51,7 +52,7 @@ TEST_F(LC524Tests, case1) {
 
 TEST_F(LC524Tests, case2) {
     string s = "abpcplea";
-    vector<string> dictionary{"a","b","c"};
+    vector<string> dictionary{"a", "b", "c"};
     string expect = "a";
     EXPECT_EQ(solution1.findLongestWord(s, dictionary), expect);
 }

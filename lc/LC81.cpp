@@ -1,5 +1,6 @@
-#include <algorithm>
 #include <gtest/gtest.h>
+
+#include <algorithm>
 #include <numeric>
 #include <unordered_map>
 #include <vector>
@@ -16,7 +17,7 @@ namespace lc81 {
 class Solution1 {
 public:
     bool search(vector<int> &nums, int target) {
-        int n = (int) nums.size();
+        int n = (int)nums.size();
         int l = 0;
         int r = n - 1;
         while (l <= r) {

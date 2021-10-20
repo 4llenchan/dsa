@@ -1,8 +1,9 @@
 #include <gtest/gtest.h>
+
 #include <algorithm>
-#include <vector>
-#include <unordered_map>
 #include <numeric>
+#include <unordered_map>
+#include <vector>
 
 #include "Common.h"
 

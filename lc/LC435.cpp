@@ -1,8 +1,9 @@
 #include <gtest/gtest.h>
+
 #include <algorithm>
-#include <vector>
-#include <unordered_map>
 #include <numeric>
+#include <unordered_map>
+#include <vector>
 
 #include "Common.h"
 
@@ -15,7 +16,7 @@ using namespace std;
 class Solution1 {
 public:
     int eraseOverlapIntervals(vector<vector<int>> &intervals) {
-        int n = (int) intervals.size();
+        int n = (int)intervals.size();
         if (n <= 1) {
             return 0;
         }

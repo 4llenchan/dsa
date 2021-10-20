@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
+
 #include <string>
 #include <vector>
+
 #include "Common.h"
 
 using namespace std;

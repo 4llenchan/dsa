@@ -1,5 +1,6 @@
-#include <algorithm>
 #include <gtest/gtest.h>
+
+#include <algorithm>
 #include <numeric>
 #include <unordered_map>
 #include <vector>
@@ -32,7 +33,7 @@ public:
             dp[i][0] = true;
         }
         for (int i = 1; i <= n; ++i) {
-             for (int j = nums[i - 1]; j <= target; ++j) {
+            for (int j = nums[i - 1]; j <= target; ++j) {
                 dp[i][j] = dp[i - 1][j] || dp[i - 1][j - nums[i - 1]];
             }
         }

@@ -1,7 +1,8 @@
 #include <gtest/gtest.h>
+
 #include <algorithm>
-#include <vector>
 #include <unordered_map>
+#include <vector>
 
 #include "Common.h"
 
@@ -38,7 +39,6 @@ TEST_F(OF47Tests, normal) {
     vector<vector<int>> grid{
             {1, 3, 1},
             {1, 5, 1},
-            {4, 2, 1}
-    };
+            {4, 2, 1}};
     EXPECT_EQ(solution.maxValue(grid), 12);
 }

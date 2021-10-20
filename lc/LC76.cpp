@@ -1,8 +1,9 @@
 #include <gtest/gtest.h>
+
 #include <algorithm>
-#include <vector>
-#include <unordered_map>
 #include <numeric>
+#include <unordered_map>
+#include <vector>
 
 #include "Common.h"
 
@@ -19,14 +20,14 @@ public:
         vector<int> counts(128, 0);
         vector<bool> flags(128, false);
         /* 统计t中出现了哪些字符 */
-        for (char i: t) {
+        for (char i : t) {
             flags[i] = true;
             counts[i]++;
         }
 
-        int l = 0;      /* 窗口左端 */
-        int minL = 0;   /* 最小窗口的左端，用于最后输出结果子串 */
-        int count = 0;  /* 用于记录窗口内已经匹配了t中的字符数量 */
+        int l = 0;     /* 窗口左端 */
+        int minL = 0;  /* 最小窗口的左端，用于最后输出结果子串 */
+        int count = 0; /* 用于记录窗口内已经匹配了t中的字符数量 */
         /* 记录过程中出现的最小值，使用一个比s长度大的值作为初始即可 */
         int min = (int)s.size() + 1;
         /* 滑动窗口先移动右端 */
@@ -53,7 +54,6 @@ public:
                     ++l;
                 }
             }
-
         }
         return min > s.size() ? "" : s.substr(minL, min);
     }

@@ -71,10 +71,7 @@ std::string MathUtils::convertDecimal(uint32_t decimal) {
         uint32_t remainder = decimal % divisor;
         decimal = decimal / divisor;
         result.insert(0, 1, convert(remainder));
-    } while (decimal >= divisor);
-    if (decimal > 0) {
-        result.insert(0, 1, convert(decimal));
-    }
+    } while (decimal > 0);
     return result;
 }
 

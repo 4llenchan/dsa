@@ -1,8 +1,9 @@
 #include <gtest/gtest.h>
+
 #include <algorithm>
-#include <vector>
-#include <unordered_map>
 #include <numeric>
+#include <unordered_map>
+#include <vector>
 
 #include "Common.h"
 
@@ -15,7 +16,7 @@ using namespace std;
 class Solution1 {
 public:
     int search(vector<int> &nums, int target) {
-        int n = (int) nums.size();
+        int n = (int)nums.size();
         if (n == 1) {
             return nums[0] == target ? 0 : -1;
         }
