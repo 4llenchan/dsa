@@ -18,6 +18,7 @@ add_executable(dsa
         lc/LC77.cpp
         lc/LC81.cpp
         lc/LC88.cpp
+        lc/LC94.cpp
         lc/LC135.cpp
         lc/LC142.cpp
         lc/LC144.cpp
