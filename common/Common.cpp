@@ -1,6 +1,7 @@
 #include "Common.h"
 
 #include <cmath>
+#include <queue>
 #include <unordered_set>
 
 void ListNode::deleteList(ListNode *&head) {
@@ -44,6 +45,26 @@ void ListNode::deleteCycleList(ListNode *&head) {
         delete tmp;
     }
     head = nullptr;
+}
+
+void TreeNode::deleteTree(TreeNode *&root) {
+    std::queue<TreeNode *> queue;
+    if (root) {
+        queue.push(root);
+    }
+    /* 层次遍历进行节点的删除 */
+    while (!queue.empty()) {
+        auto *node = queue.front();
+        queue.pop();
+        if (node->left) {
+            queue.push(node->left);
+        }
+        if (node->right) {
+            queue.push(node->right);
+        }
+        delete node;
+    }
+    root = nullptr;
 }
 
 bool Utils::isOrderly(std::vector<int> &nums, bool ascending) {
