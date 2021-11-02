@@ -36,7 +36,7 @@ public:
 };
 
 /**
- * 二叉树中序遍历，非递归实现
+ * 二叉树后序遍历，非递归实现
  */
 class Solution2 {
 public:
