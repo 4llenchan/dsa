@@ -39,6 +39,7 @@ add_executable(dsa
         lc/LC524.cpp
         lc/LC542.cpp
         lc/LC547.cpp
+        lc/LC598.cpp
         lc/LC695.cpp
         of/OF5.cpp
         of/OF6.cpp
