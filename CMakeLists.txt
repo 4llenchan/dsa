@@ -28,6 +28,7 @@ add_executable(dsa
         lc/LC215.cpp
         lc/LC221.cpp
         lc/LC225.cpp
+        lc/LC232.cpp
         lc/LC268.cpp
         lc/LC299.cpp
         lc/LC300.cpp
